@@ -14,5 +14,5 @@ def canUnlockAll(boxes):
 
     if set(box_list).issubset(set(keys)):
         return True
-    
+
     return False
