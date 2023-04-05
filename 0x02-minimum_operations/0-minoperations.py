@@ -23,7 +23,7 @@ def minOperations(n):
             # copy all text
             clipboard = text
             operations += 1
-        
+
         # paste the copied text
         text += clipboard
         clipboard = ''
