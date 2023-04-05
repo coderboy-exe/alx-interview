@@ -10,14 +10,14 @@ def minOperations(n):
         return 0
 
     operations = 0
-    clipboard = ''
-    text = 'H'
+    clipboard = 0
+    text = 1
 
-    while len(text) < n:
-        if len(clipboard) > 0:
+    while text < n:
+        if clipboard > 0:
             # paste the clipboard
             text += clipboard
-            clipboard = ''
+            clipboard = 0
             operations += 1
         else:
             # copy all text
@@ -26,7 +26,7 @@ def minOperations(n):
 
         # paste the copied text
         text += clipboard
-        clipboard = ''
+        clipboard = 0
         operations += 1
 
     return operations
