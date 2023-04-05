@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Module definition"""
+"""Module definition: minimum number of operations Algo"""
 
 
 def minOperations(n):
