@@ -23,7 +23,7 @@ if __name__ == "__main__":
         """ try parsing each individual line """
         for line in sys.stdin:
             line_args = line.split()
-            if len(line_args) == 9:
+            if len(line_args) > 4:
                 code = int(line_args[-2])
                 file_size = int(line_args[-1])
 
