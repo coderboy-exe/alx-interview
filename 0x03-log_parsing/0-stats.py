@@ -17,7 +17,7 @@ def get_stats():
             print(f"{key}: {value}")
 
 
-if  __name__ == "__main__":
+if __name__ == "__main__":
 
     try:
         for line in sys.stdin:
