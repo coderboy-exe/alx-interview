@@ -18,8 +18,9 @@ def get_stats():
 
 
 if __name__ == "__main__":
-    """ if name == main """
+
     try:
+        """ try parsing each individual line """
         for line in sys.stdin:
             line_args = line.split()
             if len(line_args) == 9:
