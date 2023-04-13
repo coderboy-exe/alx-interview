@@ -11,10 +11,10 @@ counter = 0
 
 def get_stats():
     """ Function to print pre-computed metrics """
-    print("File size: {:d}".format(total_size))
+    print("File size: {}".format(total_size))
     for key, value in sorted(status_codes.items()):
         if value != 0:
-            print("{}: {:d}".format(key, value))
+            print("{}: {}".format(key, value))
 
 
 if __name__ == "__main__":
