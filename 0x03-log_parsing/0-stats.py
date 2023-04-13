@@ -18,7 +18,7 @@ def get_stats():
 
 
 if __name__ == "__main__":
-
+    """ if name == main """
     try:
         for line in sys.stdin:
             line_args = line.split()
