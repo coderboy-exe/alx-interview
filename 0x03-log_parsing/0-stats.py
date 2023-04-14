@@ -19,6 +19,10 @@ def get_stats():
 
 if __name__ == "__main__":
 
+    if sys.stdin is None:
+        total_size = 0
+        print("File size: {}".format(total_size))
+
     try:
         """ try parsing each individual line """
         for line in sys.stdin:
