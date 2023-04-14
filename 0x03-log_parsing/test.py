@@ -30,7 +30,7 @@ if __name__ == "__main__":
 
                 keys = status_codes.keys()
                 if code not in status_codes:
-                    break
+                    code = None
                 elif code in keys:
                     status_codes[code] += 1
                 total_size += file_size
@@ -43,4 +43,5 @@ if __name__ == "__main__":
     except KeyboardInterrupt:
         get_stats()
         raise
+
     get_stats()
