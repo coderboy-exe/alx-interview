@@ -13,7 +13,7 @@ def get_stats():
     """ Function to print pre-computed metrics """
     print("File size: {}".format(total_size))
     for key, value in sorted(status_codes.items()):
-        if value != 0:
+        if value > 0:
             print("{}: {}".format(key, value))
 
 
@@ -23,12 +23,15 @@ if __name__ == "__main__":
         """ try parsing each individual line """
         for line in sys.stdin:
             line_args = line.split()
-            if len(line_args) == 9:
+
+            if len(line_args) > 2:
                 code = int(line_args[-2])
                 file_size = int(line_args[-1])
 
                 keys = status_codes.keys()
-                if code in keys:
+                if code not in status_codes:
+                    code = None
+                elif code in keys:
                     status_codes[code] += 1
                 total_size += file_size
                 counter += 1
@@ -39,3 +42,6 @@ if __name__ == "__main__":
 
     except KeyboardInterrupt:
         get_stats()
+        raise
+
+    get_stats()
